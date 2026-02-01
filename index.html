@@ -1,0 +1,59 @@
+
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-100vh);opacity:0;}
+}
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="https://files.catbox.moe/5wz7d8.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>🌹 Happy Rose Day, Diptuuu 🌹</h1>
+
+  <p>
+    This rose is for you, Diptuuu… 🌹<br>
+    because every time I see you,<br>
+    my heart forgets how to behave 🫣❤️<br><br>
+
+    You make my normal days feel special,<br>
+    my smiles a little wider,<br>
+    and my world a lot prettier 💕<br><br>
+
+    I’m saying this shyly…<br>
+    <b>Will you be mine, Diptuuu?</b> 🥺💖<br>
+    Not just today, but forever 💍✨
+  </p>
+
+  <button onclick="playMusic()">
+    Tap Yes 💕
+  </button>
+</div>
+
+<script>
+function playMusic(){
+  document.getElementById("bgMusic").play();
+  alert("You just made my heart the happiest, Diptuuu ❤️");
+}
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+}
+setInterval(createHeart,400);
+</script>
+</body>
+</html>
+  const heart=documen
