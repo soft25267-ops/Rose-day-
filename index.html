@@ -3,138 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Rose Day Diptuuu 🌹</title>
+<title>Rose Day 💗</title>
 
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #fff0f3, #ffe5ec);
-    font-family: 'Georgia', serif;
-    overflow: hidden;
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#ffe6ee;
+  font-family:Arial, sans-serif;
 }
 
-.container {
-    background: white;
-    padding: 30px;
-    max-width: 600px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    animation: fadeIn 2s ease;
+.card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  max-width:600px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1 {
-    color: #c9184a;
-    font-size: 32px;
-}
-
-p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
-
-.rose {
-    font-size: 40px;
-    animation: float 2s infinite ease-in-out;
-}
-
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    background: #ff4d6d;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #c9184a;
-    transform: scale(1.05);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* Falling hearts */
-.heart {
-    position: fixed;
-    top: -10px;
-    font-size: 20px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(110vh);
-        opacity: 0;
-    }
+button{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/5wz78s.mp3" type="audio/mpeg">
-</audio>
+<div class="card">
+<h1>🌹 Happy Rose Day, Diptuuu 🌹</h1>
 
-<div class="container">
-    <div class="rose">🌹</div>
-    <h1>Happy Rose Day, Diptuuu ❤️</h1>
+<p>
+This rose is for you — not just for today,<br>
+but for every moment you make my world brighter 🌸
+</p>
 
-    <p>
-        This rose is for you — not just for today,<br>
-        but for every moment you make my world brighter 🌸
-    </p>
+<p>
+You turn ordinary days into something special,<br>
+and my smiles feel more real because of you 💕
+</p>
 
-    <p>
-        You turn ordinary days into something special,<br>
-        and my smiles feel more real because of you 💕
-    </p>
+<p>
+I’m saying this softly…<br>
+<b>Will you be mine, Diptuuu?</b><br>
+Not just today, but forever ✨
+</p>
 
-    <p>
-        I’m saying this softly…<br>
-        not just today, but forever ✨
-    </p>
-
-    <button onclick="alert('I love you, Diptuuu 🌹❤️')">
-        Tap for a Surprise 💌
-    </button>
+<button onclick="love()">Tap for a Surprise 💖</button>
 </div>
 
 <script>
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
+function love(){
+  alert("I love you, Diptuuu ❤️🌹");
 }
-
-setInterval(createHeart, 300);
 </script>
 
 </body>
