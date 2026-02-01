@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I'm Sorry 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ffd6e8, #ffeef5);
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        background: white;
+        width: 90%;
+        max-width: 420px;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+        color: #ff4d88;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .heart {
+        font-size: 40px;
+        animation: beat 1s infinite;
+        margin: 15px 0;
+    }
+
+    button {
+        background: #ff4d88;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff1a66;
+        transform: scale(1.05);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+    }
+
+    .floating-heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 20px;
+        animation: floatUp 5s linear infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-110vh); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Hey… 🥺</h1>
+
+    <div class="heart">💗</div>
+
+    <p>
+        I know something I said hurt you,<br>
+        and I truly regret it.
+    </p>
+
+    <p>
+        I never meant to make you upset.<br>
+        Your smile matters to me more than anything.
+    </p>
+
+    <p>
+        I'm really, really sorry… 💞
+    </p>
+
+    <button onclick="showMessage()">Please tap 💌</button>
+
+    <p id="finalMsg" class="hidden">
+        I promise to be more careful with my words,<br>
+        because **you mean a lot to me** 🌸<br><br>
+        Can you forgive me? 🥹💖
+    </p>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("finalMsg").classList.remove("hidden");
+    createHearts();
+}
+
+function createHearts() {
+    for (let i = 0; i < 15; i++) {
+        let heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "💗";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+}
+</script>
+
+</body>
+</html>
